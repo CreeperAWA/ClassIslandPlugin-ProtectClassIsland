@@ -1,0 +1,193 @@
+<ci:SettingsPageBase x:Class="ClassIslandPlugin.ProtectClassIsland.Views.SettingsPages.ProtectClassIslandSettingsPage"
+      xmlns="https://github.com/avaloniaui"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:fa="using:FluentAvalonia.UI.Controls"
+      xmlns:loc="clr-namespace:ClassIslandPlugin.ProtectClassIsland.Localization"
+      xmlns:local="clr-namespace:ClassIslandPlugin.ProtectClassIsland.Views.SettingsPages"
+      xmlns:ci="http://classisland.tech/schemas/xaml/core"
+      mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+      x:DataType="local:ProtectClassIslandSettingsPage"
+      d:DataContext="{d:DesignInstance local:ProtectClassIslandSettingsPage}">
+    <ScrollViewer>
+        <StackPanel Classes="settings-container">
+
+            <ci:IconText x:Name="S_PluginTitle"
+                         Text="{x:Static loc:Strings.PluginName}"
+                         Glyph="&#xe816;"
+                         Margin="0 0 0 4" />
+
+            <TextBlock Text="{x:Static loc:Strings.S_Intro}"
+                       TextWrapping="Wrap"
+                       Opacity="0.75"
+                       Margin="0 0 0 12" />
+
+            <fa:SettingsExpander x:Name="S_Master"
+                                 Header="{x:Static loc:Strings.S_Master}"
+                                 Description="{x:Static loc:Strings.S_Master_D}"
+                                 IconSource="{ci:FluentIconSource &#xef4e;}">
+                <fa:SettingsExpander.Footer>
+                    <ToggleSwitch IsChecked="{Binding Settings.Enabled}" />
+                </fa:SettingsExpander.Footer>
+            </fa:SettingsExpander>
+
+            <fa:SettingsExpander x:Name="S_RandomName"
+                                 Header="{x:Static loc:Strings.S_RandomName}"
+                                 Description="{x:Static loc:Strings.S_RandomName_D}"
+                                 IconSource="{ci:FluentIconSource &#xf26e;}">
+                <fa:SettingsExpander.Footer>
+                    <ToggleSwitch IsChecked="{Binding Settings.RandomWindowNames}" />
+                </fa:SettingsExpander.Footer>
+            </fa:SettingsExpander>
+
+            <fa:SettingsExpander x:Name="S_Greeting"
+                                 Header="{x:Static loc:Strings.S_Greeting}"
+                                 Description="{x:Static loc:Strings.S_Greeting_D}"
+                                 IconSource="{ci:FluentIconSource &#xe409;}">
+                <StackPanel Spacing="12">
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
+                        <StackPanel Spacing="2">
+                            <TextBlock x:Name="S_Greeting_Enabled"
+                                       Text="{x:Static loc:Strings.S_Greeting_Enabled}" />
+                            <TextBlock Text="{x:Static loc:Strings.S_Greeting_Enabled_D}"
+                                       TextWrapping="Wrap"
+                                       Opacity="0.75" />
+                        </StackPanel>
+                        <ToggleSwitch Grid.Column="1"
+                                      VerticalAlignment="Center"
+                                      IsChecked="{Binding Settings.GreetingEnabled}" />
+                    </Grid>
+
+                    <StackPanel Spacing="8" IsEnabled="{Binding Settings.GreetingEnabled}">
+                        <StackPanel Spacing="2">
+                            <TextBlock x:Name="S_Greeting_Sentences"
+                                       Text="{x:Static loc:Strings.S_Greeting_Sentences}" />
+                            <TextBlock Text="{x:Static loc:Strings.S_Greeting_Sentences_D}"
+                                       TextWrapping="Wrap"
+                                       Opacity="0.75" />
+                        </StackPanel>
+                        <TextBox x:Name="GreetingSentencesBox"
+                                 AcceptsReturn="True"
+                                 TextWrapping="Wrap"
+                                 MaxHeight="160"
+                                 Watermark="{x:Static loc:Strings.S_Greeting_Sentences_Watermark}"
+                                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                 LostFocus="GreetingSentencesBox_OnLostFocus" />
+                    </StackPanel>
+
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12" IsEnabled="{Binding Settings.GreetingEnabled}">
+                        <StackPanel Spacing="2">
+                            <TextBlock x:Name="S_Greeting_Prefix"
+                                       Text="{x:Static loc:Strings.S_Greeting_Prefix}" />
+                            <TextBlock Text="{x:Static loc:Strings.S_Greeting_Prefix_D}"
+                                       TextWrapping="Wrap"
+                                       Opacity="0.75" />
+                        </StackPanel>
+                        <ToggleSwitch Grid.Column="1"
+                                      VerticalAlignment="Center"
+                                      IsChecked="{Binding Settings.GreetingRandomPrefix}" />
+                    </Grid>
+
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12" IsEnabled="{Binding Settings.GreetingEnabled}">
+                        <StackPanel Spacing="2">
+                            <TextBlock x:Name="S_Greeting_Suffix"
+                                       Text="{x:Static loc:Strings.S_Greeting_Suffix}" />
+                            <TextBlock Text="{x:Static loc:Strings.S_Greeting_Suffix_D}"
+                                       TextWrapping="Wrap"
+                                       Opacity="0.75" />
+                        </StackPanel>
+                        <ToggleSwitch Grid.Column="1"
+                                      VerticalAlignment="Center"
+                                      IsChecked="{Binding Settings.GreetingRandomSuffix}" />
+                    </Grid>
+
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12" IsEnabled="{Binding Settings.GreetingEnabled}">
+                        <StackPanel Spacing="2">
+                            <TextBlock x:Name="S_Greeting_Insert"
+                                       Text="{x:Static loc:Strings.S_Greeting_Insert}" />
+                            <TextBlock Text="{x:Static loc:Strings.S_Greeting_Insert_D}"
+                                       TextWrapping="Wrap"
+                                       Opacity="0.75" />
+                        </StackPanel>
+                        <ToggleSwitch Grid.Column="1"
+                                      VerticalAlignment="Center"
+                                      IsChecked="{Binding Settings.GreetingRandomInsertLetters}" />
+                    </Grid>
+
+                    <TextBlock Text="{x:Static loc:Strings.C_Greeting_Scope}"
+                               TextWrapping="Wrap"
+                               Opacity="0.75" />
+                </StackPanel>
+            </fa:SettingsExpander>
+
+            <fa:SettingsExpander x:Name="S_RandomSize"
+                                 Header="{x:Static loc:Strings.S_RandomSize}"
+                                 Description="{x:Static loc:Strings.S_RandomSize_D}"
+                                 IconSource="{ci:FluentIconSource &#xe10e;}">
+                <fa:SettingsExpander.Footer>
+                    <ToggleSwitch IsChecked="{Binding Settings.RandomWindowSize}" />
+                </fa:SettingsExpander.Footer>
+            </fa:SettingsExpander>
+
+            <fa:SettingsExpander x:Name="S_BlockClose"
+                                 Header="{x:Static loc:Strings.S_BlockClose}"
+                                 Description="{x:Static loc:Strings.S_BlockClose_D}"
+                                 IconSource="{ci:FluentIconSource &#xf482;}">
+                <fa:SettingsExpander.Footer>
+                    <ToggleSwitch IsChecked="{Binding Settings.BlockWmClose}" />
+                </fa:SettingsExpander.Footer>
+            </fa:SettingsExpander>
+
+            <fa:SettingsExpander x:Name="S_BlockForceClose"
+                                 Header="{x:Static loc:Strings.S_BlockForceClose}"
+                                 Description="{x:Static loc:Strings.S_BlockForceClose_D}"
+                                 IconSource="{ci:FluentIconSource &#xe84e;}">
+                <fa:SettingsExpander.Footer>
+                    <ToggleSwitch IsChecked="{Binding Settings.BlockForceClose}" />
+                </fa:SettingsExpander.Footer>
+            </fa:SettingsExpander>
+
+            <fa:SettingsExpander x:Name="S_KeepTop"
+                                 Header="{x:Static loc:Strings.S_KeepTop}"
+                                 Description="{x:Static loc:Strings.S_KeepTop_D}"
+                                 IconSource="{ci:FluentIconSource &#xeda0;}">
+                <fa:SettingsExpander.Footer>
+                    <ToggleSwitch IsChecked="{Binding Settings.KeepOnTop}" />
+                </fa:SettingsExpander.Footer>
+            </fa:SettingsExpander>
+
+            <fa:SettingsExpander x:Name="S_Toolwindow"
+                                 Header="{x:Static loc:Strings.S_Toolwindow}"
+                                 Description="{x:Static loc:Strings.S_Toolwindow_D}"
+                                 IconSource="{ci:FluentIconSource &#xef2c;}">
+                <fa:SettingsExpander.Footer>
+                    <ToggleSwitch IsChecked="{Binding Settings.ToolwindowDisguise}" />
+                </fa:SettingsExpander.Footer>
+            </fa:SettingsExpander>
+
+            <fa:SettingsExpander x:Name="S_Scope"
+                                 Header="{x:Static loc:Strings.S_Scope}"
+                                 Description="{x:Static loc:Strings.S_Scope_D}"
+                                 IconSource="{ci:FluentIconSource &#xf046;}">
+                <fa:SettingsExpander.Footer>
+                    <ToggleSwitch IsChecked="{Binding Settings.IncludeAllWindows}" />
+                </fa:SettingsExpander.Footer>
+            </fa:SettingsExpander>
+
+            <fa:SettingsExpander x:Name="S_ConfigPath"
+                                 Header="{x:Static loc:Strings.S_ConfigPath}"
+                                 Description="{x:Static loc:Strings.S_ConfigPath_D}"
+                                 IconSource="{ci:FluentIconSource &#xe686;}">
+                <fa:SettingsExpander.Footer>
+                    <TextBlock Text="{Binding ConfigFilePath}"
+                               TextWrapping="Wrap"
+                               Opacity="0.75"
+                               MaxWidth="360"
+                               VerticalAlignment="Center" />
+                </fa:SettingsExpander.Footer>
+            </fa:SettingsExpander>
+
+        </StackPanel>
+    </ScrollViewer>
+</ci:SettingsPageBase>
