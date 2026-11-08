@@ -18,7 +18,7 @@ ProtectClassIsland 窗口保护 —— 一个 [ClassIsland](https://github.com/C
 
 ## 配置
 
-配置保存在 ClassIsland 目录下官方文档建议的 `data/config/plugins/classislandplugin.protectclassisland/ProtectClassIsland.json`，JSON 风格与 ClassIsland 主程序一致。
+配置保存在宿主为插件创建的配置目录（`PluginConfigFolder`）下的 `ProtectClassIsland.json`，JSON 风格与 ClassIsland 主程序一致。
 
 ## 构建
 

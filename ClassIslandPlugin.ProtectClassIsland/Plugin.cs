@@ -25,14 +25,12 @@ public class Plugin : PluginBase
 
     public override void Initialize(HostBuilderContext context, IServiceCollection services)
     {
-        // 按官方开发文档建议，配置文件存放在 data/config/plugins/<插件Id> 目录下。
-        var configFolder = Path.Combine(
-            CommonDirectories.AppRootFolderPath, "data", "config", "plugins", Info.Manifest.Id);
-        Directory.CreateDirectory(configFolder);
+        // 配置文件按官方开发文档存放在插件入口类的 PluginConfigFolder 配置目录中
+        // （Initialize 时宿主已创建该目录）。
         // 处理器用工厂注册，保证在 Host 构建完成后（ConfigureFileHelper 日志可用时）才加载。
         services.AddSingleton(sp => new ProtectClassIslandConfigHandler(
             sp.GetRequiredService<ILogger<ProtectClassIslandConfigHandler>>(),
-            Path.Combine(configFolder, "ProtectClassIsland.json")));
+            Path.Combine(PluginConfigFolder, "ProtectClassIsland.json")));
         services.AddSingleton<WindowFeatureService>();
         services.AddSettingsPage<ProtectClassIslandSettingsPage>();
 
