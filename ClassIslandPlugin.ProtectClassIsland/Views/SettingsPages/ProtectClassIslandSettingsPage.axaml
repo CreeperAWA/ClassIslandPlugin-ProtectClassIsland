@@ -175,19 +175,6 @@
                 </fa:SettingsExpander.Footer>
             </fa:SettingsExpander>
 
-            <fa:SettingsExpander x:Name="S_ConfigPath"
-                                 Header="{x:Static loc:Strings.S_ConfigPath}"
-                                 Description="{x:Static loc:Strings.S_ConfigPath_D}"
-                                 IconSource="{ci:FluentIconSource &#xe686;}">
-                <fa:SettingsExpander.Footer>
-                    <TextBlock Text="{Binding ConfigFilePath}"
-                               TextWrapping="Wrap"
-                               Opacity="0.75"
-                               MaxWidth="360"
-                               VerticalAlignment="Center" />
-                </fa:SettingsExpander.Footer>
-            </fa:SettingsExpander>
-
         </StackPanel>
     </ScrollViewer>
 </ci:SettingsPageBase>

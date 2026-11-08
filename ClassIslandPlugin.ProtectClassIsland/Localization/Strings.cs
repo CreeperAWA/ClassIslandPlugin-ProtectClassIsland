@@ -30,8 +30,6 @@ public static class Strings
         ["S_Toolwindow_D"] = "将无边框弹窗标记为 WS_EX_TOOLWINDOW 工具窗口：弹窗拦截程序不会对工具窗口显示“确认拦截”提示条，弹窗同时从 Alt+Tab 中隐藏。注意：ClassIsland 主窗口属于无边框弹窗，开启后在窗口模式下主窗口也将从任务栏中隐藏。",
         ["S_Scope"] = "扩展到所有窗口",
         ["S_Scope_D"] = "开启后上述功能同时作用于设置窗口等带标题栏的窗口，随机窗口名称也会包含它们（标题栏可见文字将变为随机字符串）。注意：主窗口的随机尺寸增量可能被宿主自动记录。",
-        ["S_ConfigPath"] = "配置文件位置",
-        ["S_ConfigPath_D"] = "本插件设置保存在 ClassIsland 插件配置目录（Plugins/classislandplugin.protectclassisland）下的 ProtectClassIsland.json，风格与主程序配置一致。",
         ["S_Greeting"] = "窗口问候与嘲讽",
         ["S_Greeting_D"] = "将随机窗口标题的内容来源替换为自定义句子，用于向弹窗拦截程序显示问候或嘲讽信息；可叠加随机前缀、随机后缀与随机插入字母，避免句子被精确匹配。",
         ["S_Greeting_Enabled"] = "启用窗口问候与嘲讽",
@@ -68,8 +66,6 @@ public static class Strings
         ["S_Toolwindow_D"] = "Marks borderless popups as WS_EX_TOOLWINDOW: popup blockers do not show their \"confirm block\" bar for tool windows, and the popups are hidden from Alt+Tab as well. Note: the ClassIsland main window is a borderless popup, so with this enabled it will also be hidden from the taskbar in window mode.",
         ["S_Scope"] = "Extend to all windows",
         ["S_Scope_D"] = "When enabled, the features above also apply to windows with title bars such as the settings window, and random names extend to them as well (visible title bars become random strings). Note: the random size delta of the main window may be recorded by the host.",
-        ["S_ConfigPath"] = "Configuration file",
-        ["S_ConfigPath_D"] = "Settings are stored in ProtectClassIsland.json inside the ClassIsland plugin configuration folder (Plugins/classislandplugin.protectclassisland), in the same style as the main configuration.",
         ["S_Greeting"] = "Window greetings & taunts",
         ["S_Greeting_D"] = "Switches the random window title's content source to custom greeting or taunting sentences for the popup blocker, with optional random prefix, random suffix and random inserted letters so a sentence is never matched exactly.",
         ["S_Greeting_Enabled"] = "Enable window greetings & taunts",
@@ -106,8 +102,6 @@ public static class Strings
         ["S_Toolwindow_D"] = "枠なしポップアップを WS_EX_TOOLWINDOW として扱います：ポップアップブロッカーはツールウィンドウに対して「確認してブロック」のバーを表示せず、Alt+Tab にも表示されなくなります。注意：ClassIsland のメインウィンドウは枠なしポップアップのため、有効時はウィンドウモードのメインウィンドウもタスクバーから隠れます。",
         ["S_Scope"] = "すべてのウィンドウに拡張",
         ["S_Scope_D"] = "有効にすると、上記の機能が設定ウィンドウなどタイトルバー付きのウィンドウにも適用され、ランダムなウィンドウ名も含まれます（表示タイトルバーはランダムな文字列になります）。メインウィンドウのサイズ増分はホスト側に記録される場合があります。",
-        ["S_ConfigPath"] = "設定ファイルの場所",
-        ["S_ConfigPath_D"] = "設定は ClassIsland のプラグイン設定フォルダー（Plugins/classislandplugin.protectclassisland）にある ProtectClassIsland.json に、本体と同じスタイルで保存されます。",
         ["S_Greeting"] = "ウィンドウの挨拶と煽り",
         ["S_Greeting_D"] = "ランダムなウィンドウタイトルの内容をカスタム文に置き換え、ポップアップブロッカーに挨拶や煽りを返します。ランダムな接頭辞・接尾辞・文字挿入を組み合わせ、文が完全一致で判定されるのを防ぎます。",
         ["S_Greeting_Enabled"] = "ウィンドウの挨拶と煽りを有効にする",
@@ -165,8 +159,6 @@ public static class Strings
     public static string S_Toolwindow_D => Get("S_Toolwindow_D");
     public static string S_Scope => Get("S_Scope");
     public static string S_Scope_D => Get("S_Scope_D");
-    public static string S_ConfigPath => Get("S_ConfigPath");
-    public static string S_ConfigPath_D => Get("S_ConfigPath_D");
     public static string S_Greeting => Get("S_Greeting");
     public static string S_Greeting_D => Get("S_Greeting_D");
     public static string S_Greeting_Enabled => Get("S_Greeting_Enabled");
