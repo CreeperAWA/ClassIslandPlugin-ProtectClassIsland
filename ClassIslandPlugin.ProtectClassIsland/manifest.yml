@@ -1,6 +1,6 @@
 id: classislandplugin.protectclassisland
 name: ProtectClassIsland 窗口保护
-description: 为 ClassIsland Windows 端提供随机窗口名称与大小（标题内容来源可自定义问候/嘲讽句子）、拦截外部 WM_CLOSE 关闭请求、拦截弹窗拦截程序的强制关窗动作（拒绝隐藏与压底，仅放行移出屏幕以避免触发结束进程）、窗口层级与显示状态变化时的自愈保护等防弹窗拦截能力。所有功能均可在插件设置页中开关；配置保存在插件配置目录的 ProtectClassIsland.json 中。
+description: 为 ClassIsland Windows 端提供随机窗口名称与大小（标题内容来源可自定义问候/嘲讽句子）、拦截外部 WM_CLOSE 关闭请求、拦截弹窗拦截程序的强制关窗动作（拒绝隐藏与压底，仅放行移出屏幕以避免触发结束进程）、窗口层级与显示状态变化时的自愈保护等防弹窗拦截能力。所有功能均可在插件设置页中开关；配置保存在 data/config/plugins/classislandplugin.protectclassisland 目录的 ProtectClassIsland.json 中。
 entranceAssembly: ClassIslandPlugin.ProtectClassIsland.dll
 apiVersion: 2.0.0.0
 version: 1.0.0
