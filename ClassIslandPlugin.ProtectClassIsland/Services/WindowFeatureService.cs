@@ -767,7 +767,9 @@ public sealed partial class WindowFeatureService : IDisposable
         if ((style & WS_POPUP) == 0 || (style & WS_CHILD) != 0)
             return false;
 
-        var tracked = new TrackedWindow { Hwnd = hwnd, IsPopup = true, IsNative = true };
+        // 原生弹窗始终在作用范围内（IsPopup）：不经 RefreshTracking 赋值，需在此显式置位，
+        // 否则 Tick 循环会跳过随机名称与工具窗口伪装。
+        var tracked = new TrackedWindow { Hwnd = hwnd, IsPopup = true, IsNative = true, InScope = true };
         _tracked[hwnd] = tracked;
         try
         {
