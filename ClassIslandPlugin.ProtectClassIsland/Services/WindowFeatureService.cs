@@ -829,10 +829,13 @@ public sealed partial class WindowFeatureService : IDisposable
 
     private void InstallWinEventHooks()
     {
+        // idProcess 限定为本进程：钩子用途（自愈覆盖检查、新弹窗即时跟踪）只关心本进程
+        // 窗口，限定后系统里其它进程的事件不会派发进本进程 UI 线程，避免全局钩子的
+        // 无谓回调开销。
         foreach (var eventType in (uint[])[EVENT_SYSTEM_FOREGROUND, EVENT_OBJECT_SHOW, EVENT_OBJECT_HIDE, EVENT_OBJECT_REORDER])
         {
             var hook = SetWinEventHook(
-                eventType, eventType, nint.Zero, WinEventProc, 0, 0, WINEVENT_OUTOFCONTEXT);
+                eventType, eventType, nint.Zero, WinEventProc, (uint)Environment.ProcessId, 0, WINEVENT_OUTOFCONTEXT);
             if (hook != nint.Zero)
                 _winEventHooks.Add(hook);
         }
@@ -854,12 +857,9 @@ public sealed partial class WindowFeatureService : IDisposable
             Interlocked.Exchange(ref instance._lastEventFixTicks, now);
 
             // 新弹窗显示（下拉框、Flyout 等）：立即跟踪并挂钩，不等下一轮 Tick。
-            if (eventType == EVENT_OBJECT_SHOW && hwnd != nint.Zero && !instance._tracked.ContainsKey(hwnd))
-            {
-                _ = GetWindowThreadProcessId(hwnd, out var processId);
-                if (processId == (uint)Environment.ProcessId)
-                    instance.TryTrackNativePopup(hwnd);
-            }
+            // 钩子已限定本进程，无需再校验归属。
+            if (eventType == EVENT_OBJECT_SHOW && hwnd != nint.Zero)
+                instance.TryTrackNativePopup(hwnd);
 
             // 前台切换 / 窗口显示 / Z 序变化都可能让本软件窗口被覆盖，立即检查并恢复。
             instance.EnforceTopOrder();
