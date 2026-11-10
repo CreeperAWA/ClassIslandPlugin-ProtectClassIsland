@@ -11,6 +11,7 @@ ProtectClassIsland 窗口保护 —— 一个 [ClassIsland](https://github.com/C
 - **拦截强制关窗动作**：针对弹窗拦截程序的强制关窗动作链——拒绝其隐藏标志（SWP_HIDEWINDOW）、拒绝压底降级（HWND_BOTTOM）、拒绝屏幕内的位置与尺寸改动，仅允许“移动到屏幕外”这一步，以避免拦截程序触发后备的进程结束逻辑（TerminateProcess）。同时吞掉外部投递的 WM_SYSCOMMAND（SC_CLOSE）与诱导自隐藏的 WM_SHOWWINDOW。
 - **层级与显示保护**：监听窗口层级与状态变化：弹窗被其他窗口覆盖时立即移回顶层；Topmost 置顶层带被剥夺时立即恢复；窗口被外部隐藏、最小化、禁用或移出屏幕时延迟恢复（以软件自身的显示意图为准，不影响正常的最小化与后台驻留）。
 - **弹窗工具窗口伪装**：将无边框弹窗标记为 WS_EX_TOOLWINDOW 工具窗口：弹窗拦截程序不会对工具窗口显示“确认拦截”提示条，弹窗同时从 Alt+Tab 中隐藏。
+- **原生弹窗保护**：下拉框（ComboBox）、Flyout、右键菜单等弹出层宿主在 Avalonia Window 集合之外的本进程 WS_POPUP 顶层窗口（如 PhonyRootWindow）中，本插件同样对其应用 WM_CLOSE 拦截、强制关窗对抗与工具窗口伪装，并在弹窗显示时即时挂钩。
 
 > 注：原插件（SecRandom.Plugin.HideSecRandom）中的「防止窗口被捕获」（SetWindowDisplayAffinity）功能**未**移植到本插件。
 
