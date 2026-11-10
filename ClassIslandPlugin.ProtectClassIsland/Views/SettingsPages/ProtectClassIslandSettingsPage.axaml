@@ -175,6 +175,15 @@
                 </fa:SettingsExpander.Footer>
             </fa:SettingsExpander>
 
+            <fa:SettingsExpander x:Name="S_NativePopup"
+                                 Header="{x:Static loc:Strings.S_NativePopup}"
+                                 Description="{x:Static loc:Strings.S_NativePopup_D}"
+                                 IconSource="{ci:FluentIconSource &#xe774;}">
+                <fa:SettingsExpander.Footer>
+                    <ToggleSwitch IsChecked="{Binding Settings.NativePopupProtection}" />
+                </fa:SettingsExpander.Footer>
+            </fa:SettingsExpander>
+
         </StackPanel>
     </ScrollViewer>
 </ci:SettingsPageBase>

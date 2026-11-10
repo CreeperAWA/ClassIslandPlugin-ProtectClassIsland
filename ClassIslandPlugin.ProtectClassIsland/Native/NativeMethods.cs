@@ -37,6 +37,7 @@ internal static class NativeMethods
     public const uint WM_SYSCOMMAND = 0x0112;
     public const ulong SC_CLOSE = 0xF060;
     public const uint EVENT_SYSTEM_FOREGROUND = 0x0003;
+    public const uint EVENT_OBJECT_CREATE = 0x8000;
     public const uint EVENT_OBJECT_SHOW = 0x8002;
     public const uint EVENT_OBJECT_HIDE = 0x8003;
     public const uint EVENT_OBJECT_REORDER = 0x8004;
