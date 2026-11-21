@@ -178,7 +178,7 @@
             <fa:SettingsExpander x:Name="S_NativePopup"
                                  Header="{x:Static loc:Strings.S_NativePopup}"
                                  Description="{x:Static loc:Strings.S_NativePopup_D}"
-                                 IconSource="{ci:FluentIconSource &#xe775;}">
+                                 IconSource="{ci:FluentIconSource &#xe5c3;}">
                 <fa:SettingsExpander.Footer>
                     <ToggleSwitch IsChecked="{Binding Settings.NativePopupProtection}" />
                 </fa:SettingsExpander.Footer>
