@@ -1,0 +1,67 @@
+<div align="center">
+
+# ProtectClassIsland
+
+**ClassIsland 窗口保护插件**
+
+<img src="ClassIslandPlugin.ProtectClassIsland/icon.png" width="96" alt="ProtectClassIsland 图标" />
+
+为 ClassIsland 的弹出窗口提供防截屏捕获、随机窗口特征与防关闭保护。
+
+*Windows · ClassIsland 2.x · GPL-3.0-only*
+
+</div>
+
+---
+
+## 简介
+
+ClassIsland 的课表、托盘菜单等弹出窗口，常常被恶意的「弹窗拦截程序」拦截：弹窗询问用户是否拦截、被强制关闭、被置底，甚至是移动到屏幕外。ProtectClassIsland 是一款 ClassIsland 插件，为这些窗口提供一层保护——所有能力都集中在插件设置页里，打开开关即可生效。
+
+「扩展到所有窗口」默认开启，主窗口、设置窗口等与弹出窗口一并纳入保护范围；关闭后仅保护**无边框弹出窗口**。
+
+## 功能一览
+
+| 功能 | 说明 | 默认 |
+| :--- | :--- | :-: |
+| 防止窗口被捕获 | 窗口在屏幕共享、录屏与常规截图中不可见 | 开 |
+| 随机窗口名称 | 为窗口随机命名；无边框弹窗始终随机化，扩展到所有窗口后，可见标题栏文字也会随机化 | 开 |
+| 窗口问候与嘲讽 | 把随机标题的内容换成你自定义的句子，并自动叠加随机前缀、随机后缀与随机插入字母，避免被精确匹配 | 关 |
+| 随机窗口大小 | 窗口每次打开时尺寸随机略微增大 | 关 |
+| 拦截外部关闭请求 | 其他程序发来的关闭请求会被直接忽略 | 开 |
+| 拦截强制关窗动作 | 逐环节化解隐藏窗口、压低层级、移动位置、结束进程等强制关窗手段 | 开 |
+| 层级与显示保护 | 弹窗被遮挡时立即回到顶层；被外部隐藏、最小化或移出屏幕时自动恢复 | 开 |
+| 弹窗工具窗口伪装 | 弹窗不再触发拦截程序的「确认拦截」提示条，同时从 Alt+Tab 中隐藏 | 开 |
+| 扩展到所有窗口 | 将上述保护从无边框弹窗扩展到主窗口、设置窗口等全部窗口 | 开 |
+
+## 安装
+
+1. 获取插件包 `ClassIsland.Plugin.ProtectClassIsland.cipx`；
+2. 将其放入 ClassIsland 数据目录下的 `data/cache/PluginPackages/` 文件夹；
+3. 重启 ClassIsland，安装即告完成。
+
+## 使用
+
+安装后，ClassIsland **设置** 中会出现「ProtectClassIsland 窗口保护」条目，全部功能都在这里管理：
+
+- 总开关一键启停所有保护；
+- 所有开关**即时生效**，无需重启 ClassIsland；
+- 关闭某个开关或整个插件后，被修改的窗口特征会**自动还原**；
+- 设置自动保存；界面提供简体中文 / English / 日本語，跟随 ClassIsland 的语言设置。
+
+## 系统要求
+
+- ClassIsland 桌面版（版本 2.x）；
+- Windows 10 或更高版本，其中「防止窗口被捕获」需要 Windows 10 2004 或更新；
+- 仅面向 Windows 平台，其他平台上插件不会启用任何保护功能。
+
+## 注意事项
+
+- 「防止窗口被捕获」由 Windows 系统提供，能覆盖屏幕共享、录屏与常规截图，但无法对抗用相机直接拍摄屏幕，所以请维护好班上的设备，以防遇上动不动就拍照报修的老师；
+- 界面按钮、Alt+F4 等正常关闭方式始终可用，插件不会妨碍你自己的操作。
+
+## 许可
+
+本项目与 ClassIsland 相同，以 [GPL-3.0-only](https://www.gnu.org/licenses/gpl-3.0.html) 许可证发布。
+
+ClassIsland 主程序：[ClassIsland](https://github.com/ClassIsland/ClassIsland)
