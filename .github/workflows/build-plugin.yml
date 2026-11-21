@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: plugin-cipx
-          path: ClassIslandPlugin.ProtectClassIsland/cipx/
+          path: ClassIslandPlugin.ProtectClassIsland/cipx/*.cipx
           if-no-files-found: error
 
   release-build:
