@@ -15,7 +15,7 @@
 
             <ci:IconText x:Name="S_PluginTitle"
                          Text="{x:Static loc:Strings.PluginName}"
-                         Glyph="&#xe816;"
+                         Glyph="&#xe817;"
                          Margin="0 0 0 4" />
 
             <TextBlock Text="{x:Static loc:Strings.S_Intro}"
@@ -26,7 +26,7 @@
             <fa:SettingsExpander x:Name="S_Master"
                                  Header="{x:Static loc:Strings.S_Master}"
                                  Description="{x:Static loc:Strings.S_Master_D}"
-                                 IconSource="{ci:FluentIconSource &#xef4e;}">
+                                 IconSource="{ci:FluentIconSource &#xef4f;}">
                 <fa:SettingsExpander.Footer>
                     <ToggleSwitch IsChecked="{Binding Settings.Enabled}" />
                 </fa:SettingsExpander.Footer>
@@ -35,7 +35,7 @@
             <fa:SettingsExpander x:Name="S_RandomName"
                                  Header="{x:Static loc:Strings.S_RandomName}"
                                  Description="{x:Static loc:Strings.S_RandomName_D}"
-                                 IconSource="{ci:FluentIconSource &#xf26e;}">
+                                 IconSource="{ci:FluentIconSource &#xf26f;}">
                 <fa:SettingsExpander.Footer>
                     <ToggleSwitch IsChecked="{Binding Settings.RandomWindowNames}" />
                 </fa:SettingsExpander.Footer>
@@ -44,7 +44,7 @@
             <fa:SettingsExpander x:Name="S_Greeting"
                                  Header="{x:Static loc:Strings.S_Greeting}"
                                  Description="{x:Static loc:Strings.S_Greeting_D}"
-                                 IconSource="{ci:FluentIconSource &#xe409;}">
+                                 IconSource="{ci:FluentIconSource &#xe40a;}">
                 <StackPanel Spacing="12">
                     <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
                         <StackPanel Spacing="2">
@@ -124,7 +124,7 @@
             <fa:SettingsExpander x:Name="S_RandomSize"
                                  Header="{x:Static loc:Strings.S_RandomSize}"
                                  Description="{x:Static loc:Strings.S_RandomSize_D}"
-                                 IconSource="{ci:FluentIconSource &#xe10e;}">
+                                 IconSource="{ci:FluentIconSource &#xe10f;}">
                 <fa:SettingsExpander.Footer>
                     <ToggleSwitch IsChecked="{Binding Settings.RandomWindowSize}" />
                 </fa:SettingsExpander.Footer>
@@ -133,7 +133,7 @@
             <fa:SettingsExpander x:Name="S_BlockClose"
                                  Header="{x:Static loc:Strings.S_BlockClose}"
                                  Description="{x:Static loc:Strings.S_BlockClose_D}"
-                                 IconSource="{ci:FluentIconSource &#xf482;}">
+                                 IconSource="{ci:FluentIconSource &#xf483;}">
                 <fa:SettingsExpander.Footer>
                     <ToggleSwitch IsChecked="{Binding Settings.BlockWmClose}" />
                 </fa:SettingsExpander.Footer>
@@ -142,7 +142,7 @@
             <fa:SettingsExpander x:Name="S_BlockForceClose"
                                  Header="{x:Static loc:Strings.S_BlockForceClose}"
                                  Description="{x:Static loc:Strings.S_BlockForceClose_D}"
-                                 IconSource="{ci:FluentIconSource &#xe84e;}">
+                                 IconSource="{ci:FluentIconSource &#xe84f;}">
                 <fa:SettingsExpander.Footer>
                     <ToggleSwitch IsChecked="{Binding Settings.BlockForceClose}" />
                 </fa:SettingsExpander.Footer>
@@ -151,7 +151,7 @@
             <fa:SettingsExpander x:Name="S_KeepTop"
                                  Header="{x:Static loc:Strings.S_KeepTop}"
                                  Description="{x:Static loc:Strings.S_KeepTop_D}"
-                                 IconSource="{ci:FluentIconSource &#xeda0;}">
+                                 IconSource="{ci:FluentIconSource &#xeda1;}">
                 <fa:SettingsExpander.Footer>
                     <ToggleSwitch IsChecked="{Binding Settings.KeepOnTop}" />
                 </fa:SettingsExpander.Footer>
@@ -160,7 +160,7 @@
             <fa:SettingsExpander x:Name="S_Toolwindow"
                                  Header="{x:Static loc:Strings.S_Toolwindow}"
                                  Description="{x:Static loc:Strings.S_Toolwindow_D}"
-                                 IconSource="{ci:FluentIconSource &#xef2c;}">
+                                 IconSource="{ci:FluentIconSource &#xef2d;}">
                 <fa:SettingsExpander.Footer>
                     <ToggleSwitch IsChecked="{Binding Settings.ToolwindowDisguise}" />
                 </fa:SettingsExpander.Footer>
@@ -169,7 +169,7 @@
             <fa:SettingsExpander x:Name="S_Scope"
                                  Header="{x:Static loc:Strings.S_Scope}"
                                  Description="{x:Static loc:Strings.S_Scope_D}"
-                                 IconSource="{ci:FluentIconSource &#xf046;}">
+                                 IconSource="{ci:FluentIconSource &#xf047;}">
                 <fa:SettingsExpander.Footer>
                     <ToggleSwitch IsChecked="{Binding Settings.IncludeAllWindows}" />
                 </fa:SettingsExpander.Footer>
@@ -178,7 +178,7 @@
             <fa:SettingsExpander x:Name="S_NativePopup"
                                  Header="{x:Static loc:Strings.S_NativePopup}"
                                  Description="{x:Static loc:Strings.S_NativePopup_D}"
-                                 IconSource="{ci:FluentIconSource &#xe774;}">
+                                 IconSource="{ci:FluentIconSource &#xe775;}">
                 <fa:SettingsExpander.Footer>
                     <ToggleSwitch IsChecked="{Binding Settings.NativePopupProtection}" />
                 </fa:SettingsExpander.Footer>

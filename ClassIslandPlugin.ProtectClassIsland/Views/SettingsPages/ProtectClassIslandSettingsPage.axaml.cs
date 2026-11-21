@@ -7,7 +7,7 @@ using ClassIslandPlugin.ProtectClassIsland.Configuration;
 
 namespace ClassIslandPlugin.ProtectClassIsland.Views.SettingsPages;
 
-[SettingsPageInfo("classislandplugin.protectclassisland.settings", "ProtectClassIsland 窗口保护", "\ue816", "\ue816")]
+[SettingsPageInfo("classislandplugin.protectclassisland.settings", "ProtectClassIsland 窗口保护", "\ue817", "\ue817")]
 public partial class ProtectClassIslandSettingsPage : SettingsPageBase
 {
     private readonly ProtectClassIslandConfigHandler _configHandler;
