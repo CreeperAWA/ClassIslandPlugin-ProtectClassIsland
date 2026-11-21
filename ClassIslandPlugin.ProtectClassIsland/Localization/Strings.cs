@@ -13,7 +13,7 @@ public static class Strings
     private static readonly IReadOnlyDictionary<string, string> Chinese = new Dictionary<string, string>
     {
         ["PluginName"] = "ProtectClassIsland 窗口保护",
-        ["S_Intro"] = "为 ClassIsland 的窗口提供随机窗口特征与防关闭保护，用于对抗弹窗拦截程序。默认只作用于无边框弹出窗口（ClassIsland 主窗口等）；所有改动在关闭对应开关或插件后自动还原。本插件未包含原版 SecRandom 插件的「防止窗口被捕获」功能。",
+        ["S_Intro"] = "为 ClassIsland 的窗口提供随机窗口特征与防关闭保护，用于对抗弹窗拦截程序。默认只作用于无边框弹出窗口（ClassIsland 主窗口等）；所有改动在关闭对应开关或插件后自动还原。",
         ["S_Master"] = "启用 ProtectClassIsland",
         ["S_Master_D"] = "总开关：关闭后所有功能立即停用，并恢复已修改的窗口特征。",
         ["S_RandomName"] = "随机窗口名称",
@@ -51,7 +51,7 @@ public static class Strings
     private static readonly IReadOnlyDictionary<string, string> English = new Dictionary<string, string>
     {
         ["PluginName"] = "ProtectClassIsland Window Guard",
-        ["S_Intro"] = "Protects ClassIsland windows against popup-blocker detection and forced closing with randomized window traits. By default only borderless popup windows (the ClassIsland main window, etc.) are affected; every change is reverted automatically when a switch or the plugin is turned off. The original SecRandom plugin's \"prevent window capture\" feature is not included in this plugin.",
+        ["S_Intro"] = "Protects ClassIsland windows against popup-blocker detection and forced closing with randomized window traits. By default only borderless popup windows (the ClassIsland main window, etc.) are affected; every change is reverted automatically when a switch or the plugin is turned off.",
         ["S_Master"] = "Enable ProtectClassIsland",
         ["S_Master_D"] = "Master switch: turning it off disables every feature immediately and reverts window traits that were changed.",
         ["S_RandomName"] = "Random window names",
@@ -89,7 +89,7 @@ public static class Strings
     private static readonly IReadOnlyDictionary<string, string> Japanese = new Dictionary<string, string>
     {
         ["PluginName"] = "ProtectClassIsland ウィンドウ保護",
-        ["S_Intro"] = "ClassIsland のウィンドウを、ポップアップブロッカーの検出や強制終了から、ランダム化されたウィンドウ特性で保護します。既定では枠なしポップアップウィンドウ（ClassIsland のメインウィンドウなど）のみが対象で、スイッチやプラグインを無効にすると変更は自動的に元に戻ります。元の SecRandom プラグインの「ウィンドウのキャプチャ防止」機能は含まれていません。",
+        ["S_Intro"] = "ClassIsland のウィンドウを、ポップアップブロッカーの検出や強制終了から、ランダム化されたウィンドウ特性で保護します。既定では枠なしポップアップウィンドウ（ClassIsland のメインウィンドウなど）のみが対象で、スイッチやプラグインを無効にすると変更は自動的に元に戻ります。",
         ["S_Master"] = "ProtectClassIsland を有効にする",
         ["S_Master_D"] = "マスタースイッチ：オフにすると全機能が即時に無効になり、変更されたウィンドウ特性も元に戻ります。",
         ["S_RandomName"] = "ランダムなウィンドウ名",
